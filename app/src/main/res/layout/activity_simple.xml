@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="strData"
+            type="String"/>
+
+        <variable
+            name="intData"
+            type="int"/>
+
+        <variable
+            name="entity"
+            type="com.practice.zengxiangge.simpledemo.Entity"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@{strData}"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@{String.valueOf(intData)}"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@{entity.data_1}"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@{String.valueOf(entity.data_2)}"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@{entity.data_3?entity.data_1 :entity.data_2}"/>
+
+    </LinearLayout>
+
+</layout>
